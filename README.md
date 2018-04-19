@@ -21,7 +21,7 @@ Return:
 	"data": [
 		{
 			"address": "0x00000000000",
-			"name: "MyContract",
+			"name": "MyContract",
 			"compiler": "v0.4.21",
 			"balance": "1 Ether",
 			"txCount": "500",
