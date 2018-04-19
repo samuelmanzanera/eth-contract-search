@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["ethereum", "scrapping", "contracts"],
+  "homepage": "https://github.com/samuelmanzanera/eth-contract-search",
   "author": "Samuel Manzanera <samuelmanzanera@gmail.com>",
   "license": "MIT",
   "dependencies": {
