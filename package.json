@@ -1,0 +1,22 @@
+{
+  "name": "eth-contract-search",
+  "version": "1.0.0",
+  "description": "Web scrapping of https://etherscan.io/contractsVerified to find ethereum contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Samuel Manzanera <samuelmanzanera@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
