@@ -1,6 +1,6 @@
 {
   "name": "eth-contract-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web scrapping of https://etherscan.io/contractsVerified to find ethereum contracts",
   "main": "index.js",
   "scripts": {

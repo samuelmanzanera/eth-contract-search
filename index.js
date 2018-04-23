@@ -47,7 +47,7 @@ class EthContractSearch {
                 verificationDate: td.eq(6).text()
             }
         })
-        return results
+        return results.get()
     }
 
     /**
@@ -57,14 +57,23 @@ class EthContractSearch {
     getPagination (html) {
         const $ = cheerio.load(html)
         const header = $('.profile .row').eq(1)
-        const pagination = header.children().eq(1).find('a')
+        const paginationEl = header.children().eq(1).find('a')
+        let pagination = {}
 
-        return { 
-            first: pagination.eq(0).attr('href') !== '#' ? this.extractPageNumberFromHref(pagination.eq(0).attr('href')) : undefined,
-            prev: pagination.eq(1).attr('href') !== '#' ? this.extractPageNumberFromHref(pagination.eq(1).attr('href')) : undefined,
-            next: pagination.eq(2).attr('href') !== '#' ? this.extractPageNumberFromHref(pagination.eq(2).attr('href')) : undefined,
-            last: pagination.eq(3).attr('href') !== '#' ? this.extractPageNumberFromHref(pagination.eq(3).attr('href')) : undefined,
+        if (paginationEl.eq(0).attr('href') !== '#') {
+            pagination.first = this.extractPageNumberFromHref(paginationEl.eq(0).attr('href'))
         }
+        if (paginationEl.eq(1).attr('href') !== '#') {
+            pagination.prev = this.extractPageNumberFromHref(paginationEl.eq(1).attr('href'))
+        }
+        if (paginationEl.eq(2).attr('href') !== '#') {
+            pagination.next = this.extractPageNumberFromHref(paginationEl.eq(2).attr('href'))
+        }
+        if (paginationEl.eq(3).attr('href') !== '#') {
+            pagination.last = this.extractPageNumberFromHref(paginationEl.eq(3).attr('href'))
+        }
+
+        return pagination
     }
 
     /**
