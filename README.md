@@ -1,5 +1,7 @@
 
-# eth-contract-search
+# eth-contract-search [![Build Status](https://travis-ci.org/samuelmanzanera/eth-contract-search.svg?branch=master)](https://travis-ci.org/samuelmanzanera/eth-contract-search)
+
+[![NPM](https://nodei.co/npm/eth-contract-search.png)](https://npmjs.org/package/eth-contract-search)
 
 List and query verified Ethereum smart contracts based on etherscan.io
 
