@@ -12,6 +12,8 @@ $ npm install eth-contract-search
 
 ## Usage
 
+> Because Etherscan.io does not provide an CORS endpoint, the package needs to be used on NodeJS application and not browser application
+
 Find a contract name DAO
 ```js
 let ethContractSearch = require('eth-contract-search')
